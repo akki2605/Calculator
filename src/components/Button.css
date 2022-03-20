@@ -10,15 +10,18 @@ button {
   transition: 0.1s;
 }
 
+
 button:active {
   transform: scale(0.95);
-  /* box-shadow: inset 5em 1em gold; */
-  /* box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24); */
-  /* //background-color: rgb(100, 100, 100); */
 }
 
+button:hover{
+  background-color: rgb(90, 90, 90);
+}
 
 .zero {
+  padding-left: 20%;
+  text-align: left;
   grid-column: 1 / 3;
 }
 
@@ -28,4 +31,14 @@ button:active {
 .rightCorner:hover {
   
   background-color: rgb(255, 164, 44);
+}
+
+.top{
+  color: rgb(0, 0, 0);
+
+  background-color: rgb(212, 212, 210);
+}
+.top:hover {
+  color: rgb(0, 0, 0);  
+  background-color: rgb(212, 212, 210);
 }

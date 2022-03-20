@@ -6,7 +6,7 @@ import ButtonBox from "./components/ButtonBox";
 import Button from "./components/Button";
 
 const btnValues = [
-  ["c", "+ -", "%", "/"],
+  ["AC", "+ -", "%", "/"],
   [7, 8, 9, "x"],
   [4, 5, 6, "-"],
   [1, 2, 3, "+"],
@@ -128,11 +128,24 @@ const App = () => {
           return (
             <Button
               key={i}
-              className={(btn === "=" || btn === "+"|| btn === "-"||btn === "x" || btn === "/") ? "rightCorner" : btn === "0" ? "zero" :"" }
-
+              className={
+                btn === "=" ||
+                btn === "+" ||
+                btn === "-" ||
+                btn === "x" ||
+                btn === "/"
+                  ? "rightCorner"
+                  : btn === "AC" ||
+                    btn === "+ -" ||
+                    btn === "%"
+                  ? "top"
+                  : btn === 0
+                  ? "zero"
+                  : ""
+              }
               value={btn}
               onClick={
-                btn === "c"
+                btn === "AC"
                   ? resetClickHandler
                   : btn === "+ -"
                   ? invertClickHandler
