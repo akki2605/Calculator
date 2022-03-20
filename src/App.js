@@ -128,7 +128,7 @@ const App = () => {
           return (
             <Button
               key={i}
-              className={(btn === "=" || btn == "+"|| btn == "-"||btn == "x" || btn == "/") ? "rightCorner" : btn == "0" ? "zero" :"" }
+              className={(btn === "=" || btn === "+"|| btn === "-"||btn === "x" || btn === "/") ? "rightCorner" : btn === "0" ? "zero" :"" }
 
               value={btn}
               onClick={
